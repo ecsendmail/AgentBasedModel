@@ -1,4 +1,4 @@
-https://github.com/ecsendmail/AgentBasedModel/CovidSimABM%20May%2026.html
+https://github.com/ecsendmail/AgentBasedModel/raw/master/CovidSimABM%20May%2026.html
 
 This is the first prototype of an agent based model for a closed universe of a population experiencing a contagion-based epidemic, in which risk factors, movement, time of incubatin and asymptomatic infection are all parameters. The model allows the operator to intervene at any step and change parameters, thus analytically visualizing the effect of policies like more testing, contract tracing, and shelter in place. It is an .html file which can be run in a browser.
 
