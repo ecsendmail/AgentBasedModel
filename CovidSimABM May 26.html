@@ -219,12 +219,12 @@
     </table>
   </div>
 
-  <div id="chartContainer6" style="height: 150px; width: 300px; display: block;">abcde</div>
+  <div id="chartContainer6" style="height: 150px; width: 900px; display: block;">abcde</div>
   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 
 
-  <canvas id="myCanvas" width="1200" height="600"
+  <canvas id="myCanvas" width="900" height="900"
           style="border:1px solid #d3d3d3;">
   </canvas>
 
@@ -475,8 +475,8 @@ pAges[ageCount][0] = "--"        // restore for conditionals in program
 var ageFlag = false;
 var raceFlag = false;
 
-var xSIZE = 1000;
-var ySIZE = 600;
+var xSIZE = 900;
+var ySIZE = 900;
 var tRAVEL = [1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,3,3,3,3,3,3,4,4,4,4,4,5,5,5,5,5,5,6,6,6,6,6,10,10,10,30,30,50];
 var dIRECTION = [-1,0,1];
 var rand, randint;
@@ -538,14 +538,14 @@ var OldY = [];
 var ddx = [];
 var ddy = [];
 
-var Population = 36;    //1600
-var radius = 50;        //20
+var Population = 100;    //10000
+var radius = 18;        //18
 
-var newBlue = 4;
+var newBlue = 0;
 var avgSus = 1;
-var fDist = 40;
-var avgIncDays = 7;     //2
-var avgInfDays = 5;
+var fDist = 20;
+var avgIncDays = 3;     //2
+var avgInfDays = 12;
 var infectMode = 0;     //3
 var avgInfRate = 1.1;   //this is a compunding rate
 var avgClinDays = 1;
@@ -1066,11 +1066,10 @@ function loadBlues(){
   execAddBlues(newBlue);
 }
 
-function execAddBlues(newBlue){
-  addBlues(newBlue);
+function execAddBlues(bluCt){
+  addBlues(bluCt);
   drawBalls(0);
-  newBlue = 0;
-  document.getElementById("dCont").innerHTML = newBlue;
+  document.getElementById("dCont").innerHTML = bluCt;
 //  shuffle();
   drawBalls(0);
 
