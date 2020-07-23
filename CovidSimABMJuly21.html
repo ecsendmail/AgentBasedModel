@@ -39,7 +39,7 @@
       <tr>
         <th onclick="loadPop()">Population RESET</th>
         <th onclick="loadBlues()" bgcolor=LightBlue>Add Blues</th>
-        <th id ="popClick" onclick="showPop()" bgcolor=lightgreen>Click Me</th>
+        <th id ="popBut" onclick="showPop()" bgcolor=lightgreen>Click Me</th>
         <th>Greens</th>
         <th>Yellows</th>
         <th>Blues</th>
@@ -219,7 +219,7 @@
     </table>
   </div>
 
-  <div id="chartContainer6" style="height: 150px; width: 400px; display: block;">abcde</div>
+  <div id="chartContainer6" style="height: 150px; width: 400px; display: block">abcde</div>
   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 
@@ -1082,7 +1082,7 @@ var gen;
 gen = 0;
 
 function showPop(){
-if (avgInfRate == 99) alert("In showpop");
+//if (avgInfRate == 99) alert("In showpop");
 //    clearCanvas;
     ctx.fillStyle = "black";
     ctx.fillRect(0,0,canvas.width, canvas.height);
@@ -1231,10 +1231,10 @@ for (i=1; i<Population+1; i++){
 }
 
 function checkBounds(i){
-  while (pX[i] + delX[i] > xSIZE || pX[i] + delX[i]<0){
+  if ((pX[i] + delX[i]) > xSIZE || (pX[i] + delX[i])<0){
     delX[i] = -delX[i]*0.5;
   };
-  while (pY[i] + delY[i] > ySIZE || pY[i] + delY[i] <0){
+  if ((pY[i] + delY[i]) > ySIZE || (pY[i] + delY[i]) <0){
     delY[i] = -delY[i]*0.5;
   }
 
